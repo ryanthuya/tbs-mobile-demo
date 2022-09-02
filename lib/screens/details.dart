@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:http/http.dart' as http;
 
-import '../env.sample.dart';
+import '../env.api.dart';
 import '../models/student.dart';
 import './edit.dart';
 
@@ -19,7 +19,7 @@ class _DetailsState extends State<Details> {
   void deleteStudent(context) async {
     await http.delete(
       //Uri.parse(Env.URL_PREFIX+"delete"),
-      Uri.parse(Env.URL_PREFIX+widget.student.id.toString()),
+      Uri.parse(Env.url_prefix+widget.student.id.toString()),
       body: {
         'id': widget.student.id.toString(),
       },

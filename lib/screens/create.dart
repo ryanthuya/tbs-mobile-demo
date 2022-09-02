@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../env.sample.dart';
+import '../env.api.dart';
 import '../widgets/form.dart';
 import 'package:getwidget/getwidget.dart';
 
@@ -10,7 +10,7 @@ class Create extends StatefulWidget {
   //Function refreshStudentList;
   //const Create({required this.refreshStudentList});
 
-    const Create({Key? key}) : super(key: key);
+  const Create({Key? key}) : super(key: key);
 
   @override
   _CreateState createState() => _CreateState();
@@ -27,7 +27,7 @@ class _CreateState extends State<Create> {
   Future _createStudent() async {
     return await http.post(
       //"${Env.URL_PREFIX}/create.php",
-      Uri.parse("${Env.URL_PREFIX}create"),
+      Uri.parse("${Env.url_prefix}create"),
       body: {
         "name": nameController.text,
         "age": ageController.text,

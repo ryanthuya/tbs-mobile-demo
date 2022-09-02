@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tbs_mobile_demo/models/student.dart';
 import 'package:tbs_mobile_demo/screens/create.dart';
+import 'package:tbs_mobile_demo/screens/details.dart';
 import 'package:tbs_mobile_demo/screens/edit.dart';
 import 'package:tbs_mobile_demo/screens/home.dart';
 
@@ -38,19 +39,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-//
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: const MyHomePage(title: 'Flutter Demo Home Page'),
-//     );
-//   }
-// }

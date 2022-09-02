@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 
-import '../env.sample.dart';
+import '../env.api.dart';
 import '../models/student.dart';
 import 'create.dart';
 import 'details.dart';
@@ -29,11 +29,11 @@ class HomeState extends State<Home> {
     // _firebaseMessaging.getToken().then((token) => print(token));
   }
   Future<List<Student>> getStudentList() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 1));
     // Load Json Data
-    final response = await http.get(Uri.parse(Env.URL_PREFIX));
-
+    final response = await http.get(Uri.parse(Env.url_prefix));
     final items = json.decode(response.body).cast<Map<String, dynamic>>();
+    
     List<Student> students = items.map<Student>((json) {
       return Student.fromJson(json);
     }).toList();
