@@ -1,5 +1,7 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:tbs_mobile_demo/models/book.dart';
 import 'dart:convert';
 import 'dart:async';
 
@@ -19,6 +21,8 @@ class HomeState extends State<Home> {
   late Future<List<Student>> students;
   final studentListKey = GlobalKey<HomeState>();
 
+  late Future<List<Book>> books;
+
   // final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   @override
@@ -28,17 +32,30 @@ class HomeState extends State<Home> {
     //Firebase Token
     // _firebaseMessaging.getToken().then((token) => print(token));
   }
+
+
   Future<List<Student>> getStudentList() async {
+    
+    Response responseBooks;
+    var dio = Dio();
+    responseBooks = await dio.get('https://api.todaybooks.com.mm/api/books/');
+    print(responseBooks.data.toString());
+    // Optionally the request above could also be done as
+    // response = await dio.get('/test', queryParameters: {'id': 12, 'name': 'wendu'});
+    print(responseBooks.data.toString());
+
     await Future.delayed(const Duration(seconds: 1));
     // Load Json Data
     final response = await http.get(Uri.parse(Env.url_prefix));
+    print(response.body.toString());
+
     final items = json.decode(response.body).cast<Map<String, dynamic>>();
     
     List<Student> students = items.map<Student>((json) {
       return Student.fromJson(json);
     }).toList();
-
     return students;
+    
   }
 
   @override
