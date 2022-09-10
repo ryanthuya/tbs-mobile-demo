@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tbs_mobile_demo/models/student.dart';
-import 'package:tbs_mobile_demo/screens/create.dart';
-import 'package:tbs_mobile_demo/screens/details.dart';
-import 'package:tbs_mobile_demo/screens/edit.dart';
-import 'package:tbs_mobile_demo/screens/home.dart';
-
-// void main() {
-//   runApp(const MyApp());
-// }
+import 'package:tbs_mobile_demo/screens/books/home.dart';
+import 'package:tbs_mobile_demo/screens/students/create.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const Home(),
         '/create': (context) => const Create(),
-        '/edit': (context) => Edit(student:student),
+        // '/edit': (context) => Edit(student:student),
       },
     );
   }
