@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:http/http.dart' as http;
 import 'package:tbs_mobile_demo/env.api.dart';
 import 'package:tbs_mobile_demo/models/book.dart';
@@ -39,20 +40,8 @@ class HomeState extends State<Home> {
 
     if (kDebugMode) {
       print(items);
-      print(books);
     }
     return books;
-
-    // await Future.delayed(const Duration(seconds: 1));
-    // final response = await http.get(Uri.parse('https://api.todaybooks.com.mm/api/books/'));
-    // final items = json.decode(response.body)['books']['data'].cast<Map<String, dynamic>>();
-    // print(items);
-    //
-    // List<Book> books = items.map<Book>((json) {
-    //   return Book.fromJson(json);
-    // }).toList();
-    // print(books);
-    // return books;
   }
 
   @override
@@ -60,7 +49,7 @@ class HomeState extends State<Home> {
     return Scaffold(
       key: bookListKey,
       appBar: AppBar(
-        title: const Text('Top Selling Books List'),
+        title: const Text('Popular Books List'),
       ),
       body: Center(
         child: FutureBuilder<List<Book>>(
@@ -74,16 +63,22 @@ class HomeState extends State<Home> {
               itemBuilder: (BuildContext context, int index) {
                 var data = snapshot.data[index];
                 return Card(
-                  child: ListTile(
-                    leading: const Icon(Icons.book),
-                    trailing: const Icon(Icons.view_list),
-                    title: Text(
-                      data.title,
-                      style: const TextStyle(fontSize: 15),
-                    ),
-                    onTap: () {
-                    },
-                  ),
+                  child:GFListTile(
+                      avatar:GFAvatar(
+                          backgroundImage:NetworkImage(data.slug),
+                          shape: GFAvatarShape.standard
+                      ),
+                      titleText:data.title,
+                      subTitleText:data.desc.substring(0, 55)+" ...",
+
+                    icon: Icon(Icons.view_list_rounded),
+                      onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Details(book: data)),
+                          );
+                        },
+                  )
                 );
               },
             );

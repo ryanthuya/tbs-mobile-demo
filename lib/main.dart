@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tbs_mobile_demo/models/student.dart';
 import 'package:tbs_mobile_demo/screens/books/home.dart';
-import 'package:tbs_mobile_demo/screens/students/create.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
       // home: const Home(),
       routes: {
         '/': (context) => const Home(),
-        '/create': (context) => const Create(),
+        // '/create': (context) => const Create(),
         // '/edit': (context) => Edit(student:student),
       },
     );
