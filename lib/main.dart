@@ -8,7 +8,6 @@ void main() async {
   runApp(const App());
 }
 
-
 late final Student student;
 //
 class App extends StatelessWidget {
