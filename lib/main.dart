@@ -5,14 +5,14 @@ import 'package:tbs_mobile_demo/screens/books/home.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp();
-  runApp(const MyApp());
+  runApp(const App());
 }
 
 
 late final Student student;
 //
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
