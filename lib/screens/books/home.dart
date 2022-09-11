@@ -9,7 +9,6 @@ import 'dart:async';
 import 'details.dart';
 
 class Home extends StatefulWidget {
-  // const Homepage({Key? key}) : super(key: key);
   const Home({Key? key}) : super(key: key);
   @override
   HomeState createState() => HomeState();
