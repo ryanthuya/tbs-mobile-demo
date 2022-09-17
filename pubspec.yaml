@@ -36,10 +36,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.4
   dio: ^4.0.6
-#  firebase_messaging: ^13.0.0
-#  firebase_core: ^1.1.0
+  firebase_messaging: ^13.0.0
+  firebase_core: ^1.1.0
   getwidget: ^3.0.1
   flutter_launcher_icons: "^0.10.0"
+  firebase_analytics: ^9.3.5
 
 dev_dependencies:
   flutter_test:

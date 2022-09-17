@@ -1,31 +1,3 @@
-// //JSOM Format
-
-// {
-// "q": null,
-// "books": {
-// "current_page": 1,
-// "data": [
-// {
-// "id": 11,
-// "title": "အရိုးပွအရိုးပါးရောဂါအကြောင်း     သိကောင်းစရာ",
-// "desc": "လူတစ်ယောက် အရိုးပွ အရိုးပါးရောဂါဖြစ်နိုင်ခြင်း၊ မဖြစ်နိုင်ခြင်းကို အဓိကအဆုံးအဖြတ်ပေး နိုင်တဲ့ အချက် ၂ ချက် က..",
-// "price": 20,
-// "rental_price": null,
-// "slug": "https://today.s3.ap-southeast-1.amazonaws.com/img/books/bf0b568d-7229-42b3-befb-5c249d6bca32/thumb.jpg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASR26BWNNHCLKK6EZ%2F20220902%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20220902T002847Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=3608b5e87d507e6c65844c362813cc009296807229dba4d96512908d8b669b3e",
-// "stock": 100,
-// "is_free_shipping": 0,
-// "is_publish": 1,
-// "published_at": "2011-03-12 11:00:00",
-// "created_at": "2011-03-14T03:11:49.000000Z",
-// "updated_at": "2022-05-26T04:06:55.000000Z",
-// "product_id": 66,
-// "image_url": "data/Dr-Hla-Kyi(Bone).jpg",
-// "pages": null,
-// "width": null,
-// "height": null,
-// "length": null,
-// "barcode": null
-// }
 
 class Book {
   final int id;

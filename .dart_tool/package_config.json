@@ -80,6 +80,60 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "firebase_analytics",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-9.3.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_analytics_platform_interface",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics_platform_interface-3.3.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_analytics_web",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics_web-0.4.2+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.22.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-4.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.7.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_messaging",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-13.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_messaging_platform_interface",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_platform_interface-4.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_messaging_web",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-3.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/minthuyakyaw/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -100,6 +154,12 @@
     {
       "name": "flutter_test",
       "rootUri": "file:///Users/minthuyakyaw/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -126,6 +186,12 @@
       "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/image-3.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.15"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "json_annotation",
@@ -168,6 +234,12 @@
       "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-5.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.16"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/minthuyakyaw/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "sky_engine",
@@ -242,7 +314,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-09-11T16:52:35.357070Z",
+  "generated": "2022-09-16T22:59:38.699956Z",
   "generator": "pub",
-  "generatorVersion": "2.18.0"
+  "generatorVersion": "2.18.1"
 }

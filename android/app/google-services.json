@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "267559748769",
+    "project_id": "tbs-mobile-demo",
+    "storage_bucket": "tbs-mobile-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267559748769:android:3397f2ccb1d37aaaf81ce0",
+        "android_client_info": {
+          "package_name": "mm.com.todaybooks.prototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267559748769-en9m698m63c24o7a9rm9sr1cboiede4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeeBQrtlwIebnZroLlEWzo8gTVpVGL_n4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267559748769-en9m698m63c24o7a9rm9sr1cboiede4t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "267559748769-qj031ef88b6nvvbndheij7l5dvu8v17h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tbsMobileDemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -12,22 +13,70 @@ class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
   @override
   HomeState createState() => HomeState();
+  //State<StatefulWidget> createState() => HomeState();
 }
 
 class HomeState extends State<Home> {
   late Future<List<Book>> books;
   final bookListKey = GlobalKey<HomeState>();
+  final FirebaseMessaging messaging = FirebaseMessaging.instance;
 
-  // final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
+  Future<void> setupInteractedMessage() async {
+    //Firebase Token
+    messaging.getToken().then((token) => print(token));
+
+    NotificationSettings settings = await messaging.requestPermission(
+      alert: true,
+      announcement: false,
+      badge: true,
+      carPlay: false,
+      criticalAlert: false,
+      provisional: false,
+      sound: true,
+    );
+
+    print('User granted permission: ${settings.authorizationStatus}');
+
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print('Got a message whilst in the foreground!');
+      print('Message data: ${message.data}');
+
+      if (message.notification != null) {
+        print('Message also contained a notification: ${message.notification}');
+
+      }
+    });
+    // Get any messages which caused the application to open from
+    // a terminated state.
+    RemoteMessage? initialMessage =
+    await FirebaseMessaging.instance.getInitialMessage();
+
+    // If the message also contains a data property with a "type" of "chat",
+    // navigate to a chat screen
+    if (initialMessage != null) {
+      _handleMessage(initialMessage);
+
+    }
+    // Also handle any interaction when the app is in the background via a
+    // Stream listener
+
+    FirebaseMessaging.onMessageOpenedApp.listen(_handleMessage);
+  }
+  void _handleMessage(RemoteMessage message) {
+    if (message.data['type'] == 'chat') {
+      Navigator.pushNamed(context, '/chat',
+        arguments: (message),
+      );
+    }
+  }
   @override
   void initState() {
     super.initState();
+    setupInteractedMessage();
     books = getBookList();
-
-    //Firebase Token
-    // _firebaseMessaging.getToken().then((token) => print(token));
   }
+
   Future<List<Book>> getBookList() async {
     await Future.delayed(const Duration(seconds: 1));
     // Load Json Data
@@ -87,3 +136,4 @@ class HomeState extends State<Home> {
     );
   }
 }
+
