@@ -38,7 +38,7 @@ handleNotifications() async {
 }
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await FirebaseMessaging.instance.setAutoInitEnabled(true);
+  // await FirebaseMessaging.instance.setAutoInitEnabled(true);
   await Firebase.initializeApp(
     // options: DefaultFirebaseOptions.currentPlatform,
   );

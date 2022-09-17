@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -41,10 +43,12 @@ class HomeState extends State<Home> {
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       print('Got a message whilst in the foreground!');
       print('Message data: ${message.data}');
+      print('Message id: ${message.messageId}');
+
 
       if (message.notification != null) {
         print('Message also contained a notification: ${message.notification}');
-
+        print('Message also contained a notification: ${message.notification?.body.toString()}');
       }
     });
     // Get any messages which caused the application to open from
